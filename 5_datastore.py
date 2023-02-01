@@ -47,3 +47,17 @@ datastore = { "medical":[
 
       ]
 }
+outfile = open("retail_space.cvs", "w")
+outfile.write = ('room-number, use, sq-ft, price\n')
+
+list1 = datastore['medical']
+
+for dict in list1:
+  rn = dict['room number']
+  use = dict['use']
+  sq = dict['sq-ft']
+  price = dict['price']
+
+  outfile.write(str(rn) + ',' + use + ',' + str(sq) + ',' + str(price) + '\n')
+
+outfile.close()
